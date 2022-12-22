@@ -1,6 +1,7 @@
 import './Form.css'
 import FieldText from '../FieldText'
 import DropDownList from '../DropDownList'
+import Button from '../Button'
 
 const Form = () => {
     const squads = ['Frontend', 'Backend', 'Fullstack', 'Mobile', 'DevOps', 'Marketing']
@@ -12,6 +13,7 @@ const Form = () => {
                 <FieldText label="Cargo" placeholder="Digite seu cargo" />
                 <FieldText label="Imagem" placeholder="Digite o endereço da imagem" />
                 <DropDownList options={squads} label="Selecione seu Squad" />
+                <Button>Criar Card</Button>
             </form>
         </section>
     )
