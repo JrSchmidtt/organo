@@ -24,6 +24,7 @@ function App() {
           squadName={squad.name}
           primaryColor={squad.primaryColor}
           secondaryColor={squad.secondaryColor}
+          peopleList={peopleList.filter(people => people.squad === squad.name)}
         />
       })}
     </div>

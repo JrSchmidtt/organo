@@ -3,13 +3,18 @@ import FieldText from '../FieldText'
 import DropDownList from '../DropDownList'
 import Button from '../Button'
 import { useState } from 'react'
+import squads from '../../config/squads'
 
 const Form = (props) => {
-    const squads = ['Frontend', 'Backend', 'Fullstack', 'Mobile', 'DevOps', 'Marketing']
+    
+    const squadNames = squads.map((squad) => {
+        return squad.name
+    })
+
     const [name, setName] = useState('')
     const [role, setRole] = useState('')
     const [image, setImage] = useState('')
-    const [squad, setSquad] = useState(squads[0])
+    const [squad, setSquad] = useState(squadNames[0])
 
     const handleSubmit = (event) => {
         event.preventDefault()
@@ -40,7 +45,7 @@ const Form = (props) => {
                     placeholder="Digite o endereço da imagem" />
                 <DropDownList 
                     required={true} 
-                    options={squads} 
+                    options={squadNames} 
                     value={squad}
                     handleChange={value => setSquad(value)}
                     label="Selecione seu Squad" />
