@@ -1,0 +1,14 @@
+.squad{
+    text-align: center;
+    padding: 32px;
+    background-color: #D9f7e9;
+}
+
+.squad h3 {
+    font-size: 32px;
+    border-bottom: 4px solid #57c278;
+    font-weight: 600;
+    margin-bottom: 16px;
+    display: inline-block;
+    padding-bottom: 8px;
+}
