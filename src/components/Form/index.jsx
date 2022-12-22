@@ -4,7 +4,7 @@ import DropDownList from '../DropDownList'
 import Button from '../Button'
 import { useState } from 'react'
 
-const Form = () => {
+const Form = (props) => {
     const squads = ['Frontend', 'Backend', 'Fullstack', 'Mobile', 'DevOps', 'Marketing']
     const [name, setName] = useState('')
     const [role, setRole] = useState('')
@@ -13,7 +13,8 @@ const Form = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        console.log('Formulário enviado', name, role, image, squad )
+        props.onRegisterPeople({name, role, image, squad})
+        console.log('Form Send..' )
     }
 
     return (
