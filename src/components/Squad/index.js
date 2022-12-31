@@ -9,7 +9,6 @@ const Squad = ({ squadName, primaryColor, secondaryColor, peopleList, deletePeop
         borderColor: primaryColor,
     }
     const colorPicker = (e) => {
-        console.log(e.target.value)
         changeColor(e.target.value, squadName);
     }
     return (

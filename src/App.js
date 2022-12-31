@@ -3,10 +3,17 @@ import Form from './components/Form';
 import { useState } from 'react';
 import Squad from './components/Squad';
 import squadsDefault from './config/squads';
+import { v4 as uuidv4 } from 'uuid';
 
 function App() {
+
+  const squadsList = squadsDefault.map(squad => {
+    return {...squad, id: uuidv4()}
+  });
+
   const [peopleList, setPeople] = useState([]);
-  const [squads, setSquads] = useState(squadsDefault);
+  const [squads, setSquads] = useState(squadsList);
+
   const savePeople = (people) => {
     setPeople([...peopleList, people]);
   }
@@ -16,7 +23,6 @@ function App() {
   }
 
   const changeSecunderyColor = (color, squadName) => {
-    console.log("Mudando cor", color, squadName);
     const newSquads = squads.map(squad => {
       if (squad.name === squadName) {
         squad.secondaryColor = color;
