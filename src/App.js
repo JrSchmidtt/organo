@@ -15,11 +15,12 @@ function App() {
   const [squads, setSquads] = useState(squadsList);
 
   const savePeople = (people) => {
+    people.id = uuidv4();
     setPeople([...peopleList, people]);
   }
 
-  const deletePeople = (e) => {
-    console.log("Deletando pessoa", e);
+  const deletePeople = (id) => {
+    setPeople(peopleList.filter(people => people.id !== id));
   }
 
   const changeSecunderyColor = (color, squadName) => {

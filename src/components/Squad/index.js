@@ -19,7 +19,8 @@ const Squad = ({ squadName, primaryColor, secondaryColor, peopleList, deletePeop
                 <div className='cards'>
                     {peopleList.map((people, index) => {
                         return <ProfileCard
-                            key={index}
+                            key={people.id}
+                            id={people.id}
                             name={people.name}
                             role={people.role}
                             image={people.image}
