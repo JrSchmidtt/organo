@@ -19,7 +19,6 @@ const Form = (props) => {
     const handleSubmit = (event) => {
         event.preventDefault()
         props.onRegisterPeople({name, role, image, squad})
-        console.log('Form Send..' )
     }
 
     return (

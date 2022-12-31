@@ -2,6 +2,7 @@
     text-align: center;
     padding: 32px;
     background-color: #D9f7e9;
+    position: relative;
 }
 
 .squad h3 {
@@ -19,4 +20,14 @@
     margin-top: 32px;
     flex-wrap: wrap;
     align-items: center;
+}
+
+.color-picker {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
 }

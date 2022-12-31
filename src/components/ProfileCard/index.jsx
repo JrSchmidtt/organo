@@ -1,15 +1,21 @@
 import './ProfileCard.css';
+import { AiFillCloseCircle } from "react-icons/ai";
 
-const ProfileCard = ({ name, role, squadName, image }) => {
+const ProfileCard = ({ name, role, squadName, image, deletePeopleCard }) => {
     if (!image) {
         image = 'https://github.com/github.png'
     }
     return (
-        <section className='colaborador'>
-            <div className='cabecalho'>
+        <section className='profile'>
+            <div className='delete'>
+                <button onClick={deletePeopleCard}>
+                    <AiFillCloseCircle/>
+                </button>
+            </div>
+            <div className='header'>
                 <img src={image} alt='Profile Image' />
             </div>
-            <div className='rodape'>
+            <div className='footer'>
                 <h4>{name}</h4>
                 <h5>{role}</h5>
                 <h5>{squadName}</h5>

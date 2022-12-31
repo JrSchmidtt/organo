@@ -1,4 +1,4 @@
-const squads = [
+const squadsDefault = [
     {
         name: 'Frontend',
         primaryColor: '#82CFFA',
@@ -31,4 +31,4 @@ const squads = [
     }
 ]
 
-export default squads
+export default squadsDefault
